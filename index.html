@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Advice generator app</title>
+  <link href="https://fonts.googleapis.com/css?family=Manrope:400,500,600,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <article class="card">
+      <cite id="cite" class="cite">ADVICE #117</cite>
+      <blockquote id="quote" class="quote">It is easy to sit up and take notice, what's difficult is getting up and taking action.</blockquote>
+      <div class="divider"></div>
+      <div class="btn-action">
+        <button id="btnDice" class="btn">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="#202733"/>
+          </svg>
+        </button>
+      </div>
+    </article>
+  </main>
+  
+  <script>
+    btnDice.onclick = (e) => e.currentTarget.classList.toggle('active');
+  </script>
+
+</body>
+</html>

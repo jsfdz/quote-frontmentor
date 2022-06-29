@@ -1,0 +1,155 @@
+:root {
+  /* Global Base */
+  --font: 'Manrope', sans-serif;
+
+  /* Colors Base */
+  --primary: hsl(150, 100%, 66%);
+  --text-color: hsl(193, 38%, 86%);
+  --svg-color: hsl(217, 19%, 38%);
+  --card-color: hsl(217, 19%, 24%);
+  --bg-color: hsl(218, 23%, 16%);
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 17px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 375px;
+  padding: 2.5rem 1rem 0;
+  background-color: var(--card-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.card .cite {
+  font-size: .75rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.card .quote {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card .quote::before {
+  content: "“";
+}
+
+.card .quote::after {
+  content: "”";
+}
+
+.card .divider {
+  width: 295px;
+  height: 16px;
+  background-image: url("images/pattern-divider-mobile.svg");
+}
+
+.btn-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(2rem);
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 25px 2px var(--primary);
+}
+
+.btn.active svg {
+  animation: dice .7s cubic-bezier(0.36, 0.07, 0.57, 0.99) infinite;
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 500px;
+  }
+
+  .card .quote {
+    font-weight: 800;
+  }
+
+  .card .divider {
+    width: 444px;
+    height: 16px;
+    background-image: url("images/pattern-divider-desktop.svg");
+  }
+}
+
+@keyframes dice {
+  0% {
+    transform: scale(1) translate(0, 0) rotate(0);
+  }
+  10% {
+    transform: scale(1) translate(-5px, 2.5px) rotate(-10deg);
+  }
+  20% {
+    transform: scale(1) translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    transform: scale(1) translate(-5px, -2.5px) rotate(-30deg);
+  }
+  40% {
+    transform: scale(1.) translate(0, 0) rotate(-20deg);
+  }
+  50% {
+    transform: scale(1) translate(5px, 2.5px) rotate(-10deg);
+  }
+  60% {
+    transform: scale(1) translate(10px, 0) rotate(0);
+  }
+  70% {
+    transform: scale(1) translate(5px, -2.5px) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) translate(0, 0) rotate(0);
+  }
+}
